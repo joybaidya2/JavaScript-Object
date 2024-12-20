@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Object!</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <h3 id="person"></h3>
+    <h2 id="third"></h2>
+    <h1 id="four"></h1>
+    <script>
+
+       //Create object
+       const person = {
+        fistName: "Joy",
+        lastName: "Baidya",
+        gender: "Male"
+       };
+       document.getElementById("demo").innerHTML = "The person deatils : "+person.fistName +" "+person.lastName + "</br>"+"Gender: "+person.gender; 
+
+       //Create object another way 
+       const man = new Object();
+       man.firstname ="JOY";
+       man.lastName = "Baidya";
+       man.age = "30"
+       document.getElementById("person").innerHTML ="The man details: "+ man.firstname +" "+man.lastName;
+
+       // This is importan object and including function
+       const personDetails = {
+        firstname :"Joy",
+        lastName : "Baidya",
+        age : 50,
+        fullname : function(){
+            return this.firstname + " "+ this.lastName;
+        }
+       };
+       document.getElementById("third").innerHTML = "The full name is : "+ personDetails.fullname();
+
+       // how to change the object value
+       const manDetails = {
+        firstname : "Joy",
+        lastName :"Baidya",
+        age : 50
+       };
+       const x = manDetails;
+       x.age = 20;
+       document.getElementById("four").innerHTML= "The AGE is : "+ manDetails.age;
+
+    </script>
+</body>
+</html>
